@@ -1,0 +1,281 @@
+/* Remove horizontal scrollbar */
+body {
+  overflow-x: hidden;
+
+}
+
+
+
+/* Navbar.css */
+
+/* Navbar.css */
+
+/* Ensure cart button & badge are clean and readable */
+.cart-button {
+  position: relative;
+  padding-right: 1.8rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 0.7rem;
+  padding: 4px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* Searchbar spacing & visual balance */
+.search-bar input {
+  min-width: 220px;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  border-radius: 4px;
+}
+
+/* Categories styling */
+.categories-bar {
+  background-color: #343a40 !important;
+}
+
+.category-link {
+  color: #ffffff;
+  margin: 0 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.category-link:hover {
+  color: #ffc107;
+}
+
+/* Primary button improvements */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  font-size: 0.875rem;
+  padding: 6px 12px;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+
+/* video player css */
+.video-container {
+  margin: 20px auto;
+  max-width: 1100px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* outer-div and inner-div styling */
+/* Container for product cards */
+.outerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center all rows */
+  gap: 16px; /* space between cards */
+  padding: 20px 15px;
+  margin-top: 20px; /* spacing from navbar */
+  background-color: #fafafa;
+  box-sizing: border-box;
+  max-width: 1200px; /* limit width to prevent stretching */
+  margin-left: auto;
+  margin-right: auto; /* center horizontally */
+}
+
+/* Each product card */
+.innerDiv {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  width: calc((100% / 3) - 20px); /* 3 per row */
+  padding: 14px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  min-height: 260px; /* keep uniform height */
+}
+
+.innerDiv:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image smaller */
+.product-image {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Title smaller font */
+.product-title {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* Description smaller and shorter */
+.product-description {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 12px;
+  min-height: 40px;
+}
+
+/* Buttons in a row */
+.button-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto; /* push buttons to bottom if possible */
+}
+
+.btn {
+  flex: 1;
+  padding: 6px 0;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now {
+  background-color: #28a745;
+  color: white;
+}
+
+.buy-now:hover {
+  background-color: #218838;
+}
+
+.add-cart {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-cart:hover {
+  background-color: #0069d9;
+}
+
+/* Responsive: for smaller screens (below 768px), show 1 or 2 cards per row */
+@media (max-width: 767px) {
+  .innerDiv {
+    width: calc(50% - 16px); /* 2 per row */
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .innerDiv {
+    width: 100%; /* full width */
+    min-height: 220px;
+  }
+}
+
+
+/* cart design  */
+.outerCart {
+  max-width: 800px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.innerCart {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.innerCart:hover {
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.product-description {
+  margin: 0;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 600px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.btn.remove-cart {
+  background-color: #dc3545; /* Bootstrap's danger red */
+  color: white;
+  padding: 7px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 100px;
+}
+
+.btn.remove-cart:hover {
+  background-color: #c82333;
+}
+.clear-cart{
+  position: absolute;
+  right: 20px;
+}
+

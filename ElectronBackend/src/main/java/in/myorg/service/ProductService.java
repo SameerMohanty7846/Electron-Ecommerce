@@ -31,5 +31,8 @@ public class ProductService {
 	public List<ProductEntity> getAll(){
 		return repo.findAll();
 	}
+	public ProductEntity getProductById(Integer id) {
+		   return  repo.findById(id).get();
+	}
 
 }

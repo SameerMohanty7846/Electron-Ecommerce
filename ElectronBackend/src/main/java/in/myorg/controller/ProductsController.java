@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,16 @@ public class ProductsController {
 		return ResponseEntity.status(HttpStatus.OK).body(service.getAll());
 	}
 
+	@GetMapping("/products/{id}")
+	public ResponseEntity<?> productById(@PathVariable Integer id) {
+		ProductEntity entity = service.getProductById(id);
+		if (entity != null) {
+			return ResponseEntity.status(HttpStatus.OK).body(entity);
+		} else {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID DOES NOT EXIST");
+		}
+	}
+
 	@PostMapping("/products")
 	public ResponseEntity<?> insertProduct(@RequestBody ProductDto dto) {
 		ProductEntity e = service.insert(dto);
@@ -41,6 +52,6 @@ public class ProductsController {
 
 	// insert product
 	// get all products
-	//get product by id
+	// get product by id
 
 }
